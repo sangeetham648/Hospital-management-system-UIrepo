@@ -1,0 +1,22 @@
+<div class="container">
+    <h2 class="text-center">Add New Appointment</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter Name" [(ngModel)]="appointment.name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Age</label>
+            <input type="text" id="age" name="age" placeholder="Enter Age" [(ngModel)]="appointment.age" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Symptoms</label>
+            <input type="text" id="symptoms" name="symptoms" placeholder="Enter symptoms" [(ngModel)]="appointment.symptoms" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Number</label>
+            <input type="text" id="number" name="number" placeholder="Enter Number" [(ngModel)]="appointment.number" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success mt-2">Submit</button>
+    </form>
+</div>
