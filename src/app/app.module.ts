@@ -11,6 +11,10 @@ import { DocdashComponent } from './docdash/docdash.component';
 import { AddPatientComponent } from './add-patient/add-patient.component';
 import { MedicineListComponent } from './medicine-list/medicine-list.component';
 import { AddMedicineComponent } from './add-medicine/add-medicine.component';
+import { UpdatePatientComponent } from './update-patient/update-patient.component';
+import { UpdateMedicineComponent } from './update-medicine/update-medicine.component';
+import { UpdateAppointmentComponent } from './update-appointment/update-appointment.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { AddMedicineComponent } from './add-medicine/add-medicine.component';
     DocdashComponent,
     AddPatientComponent,
     MedicineListComponent,
-    AddMedicineComponent
+    AddMedicineComponent,
+    UpdatePatientComponent,
+    UpdateMedicineComponent,
+    UpdateAppointmentComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,

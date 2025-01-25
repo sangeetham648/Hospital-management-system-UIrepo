@@ -5,8 +5,8 @@ import { MedicineService } from '../services/medicine.service';
 
 @Component({
   selector: 'app-medicine-list',
-  templateUrl: './medicine-list.component.html',
-  styleUrl: './medicine-list.component.css'
+  templateUrl: 'medicine-list.component.html',
+  styleUrl: 'medicine-list.component.css'
 })
 export class MedicineListComponent {
   medicines: Medicine[] = [];
@@ -21,8 +21,12 @@ export class MedicineListComponent {
     this.medicineService.getMedicineslist().subscribe(data => {
       this.medicines = data;
     });
-
   }
+
+  updateMedicine(id:number){
+    this.router.navigate(['update-medicine',id])
+  }
+
   deleteMedicine(id: number) {
     this.medicineService.deleteMedicine(id).subscribe(data => {
       console.log(data);

@@ -1,0 +1,22 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+    <a style="color: white;" class="navbar-brand" href="#">SMS HOSPITALS</a>
+</nav>
+<div class="container">
+    <h2 class="text-center">Login into SMS Hospital Appication</h2>
+    <form>
+        <div class="form-group">
+            <label>User Name</label>
+            <input type="text" id="username" name="username" placeholder="Enter User Name" [(ngModel)]="username"
+                class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter Password" [(ngModel)]="password"
+                class="form-control">
+        </div>
+        <div class="d-grid gap-2 d-md-block">
+            <button type="submit" class="btn btn-success mt-2" (click)="checkLogin()">Login</button>
+            <button type="submit" class="btn btn-warning mt-2" routerLink="/home" style="margin-left: 16px;">Cancel</button>
+        </div>
+    </form>
+</div>

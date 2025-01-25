@@ -1,4 +1,3 @@
-import {NgModule} from '@angular/core';
 import { Component } from '@angular/core';
 import { Appointment } from '../interface/appointment';
 import { AppointmentService } from '../services/appointment.service';
@@ -11,22 +10,22 @@ import { Router } from '@angular/router';
 })
 export class CreateAppointmentComponent {
 
-  appointment:Appointment = new Appointment();
+  appointment: Appointment = new Appointment();
 
-  constructor(private appointmentService :AppointmentService,private router:Router){}
+  constructor(private appointmentService: AppointmentService, private router: Router) { }
 
-  saveAppointment(){
-    this.appointmentService.createAppointment(this.appointment).subscribe(data=>{
+  saveAppointment() {
+    this.appointmentService.createAppointment(this.appointment).subscribe(data => {
       console.log(data);
       this.goToAppointment();
     })
   }
 
-  onSubmit(){
+  onSubmit() {
     this.saveAppointment();
   }
 
-  goToAppointment(){
+  goToAppointment() {
     this.router.navigate(['/appointmentlist']);
   }
 

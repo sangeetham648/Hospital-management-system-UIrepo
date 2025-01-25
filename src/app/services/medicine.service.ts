@@ -25,7 +25,7 @@ export class MedicineService {
     }
   
     updateMedicine(id: number, medicine: Medicine): Observable<Object> {
-      return this.httpClient.put(`${this.baseUrl}/${id}`, medicine);
+      return this.httpClient.put(`${this.baseUrl}/updateMedicine/${id}`, medicine);
     }
     
     deleteMedicine(id: number): Observable<Object> {

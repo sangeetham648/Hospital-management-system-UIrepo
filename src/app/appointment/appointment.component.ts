@@ -26,10 +26,14 @@ export class AppointmentComponent {
       });
     }
 
-   delete(id:number){
+   deleteAppointment(id:number){
       this.appointmentService.deleteAppointment(id).subscribe(data =>{
         console.log(data);
         this.getAppointments();
       })
+    }
+
+    updateAppointment(id:number){
+      this.router.navigate(['update-appointment',id])
     }
 }
