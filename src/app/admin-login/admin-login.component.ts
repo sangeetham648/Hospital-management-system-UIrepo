@@ -15,7 +15,7 @@ export class AdminLoginComponent {
   constructor(private router: Router) { }
 
   checkLogin() {
-    if (this.username == 'sangeetha' && this.password == 'sangi5201') {
+    if (this.username == 'admin' && this.password == 'admin') {
       sessionStorage.setItem('username', this.username);
       this.router.navigate(['admin']);
       return true;
